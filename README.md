@@ -5,7 +5,7 @@ Reproducible Python reference implementation accompanying the manuscript:
 **Einstein–Quantum Resonance Unified Model (QRUM): A Phenomenological Formulation and Exploratory Gravitational-Wave Residual Study**
 
 Author: P. Gabor  
-DOI: `10.5281/zenodo.21632134`
+DOI: `10.5281/zenodo.21632133`
 
 ## Scope
 
