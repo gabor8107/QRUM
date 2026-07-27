@@ -1,0 +1,40 @@
+project:
+  name: "QRUM event analysis"
+  output_stem: "event_analysis"
+data:
+  strain_file: "data/replace_with_event_file.hdf5"
+  dataset_path: null
+  sample_rate: null
+  start_time: 0.0
+  duration: 32.0
+  template_file: null
+preprocessing:
+  detrend: "linear"
+  highpass_hz: 20.0
+  lowpass_hz: 500.0
+  filter_order: 4
+  taper_fraction: 0.02
+psd:
+  nperseg_seconds: 2.0
+  overlap_fraction: 0.5
+  window: "hann"
+fit:
+  fmin_hz: 80.0
+  fmax_hz: 250.0
+  f0_bounds_hz: [100.0, 220.0]
+  q_bounds: [2.0, 100.0]
+  amplitude_bounds: [0.0, 1.0e100]
+  baseline: "linear"
+  use_log_power: false
+line_exclusion:
+  enabled: true
+  half_width_hz: 1.0
+  frequencies_hz: [60.0, 120.0, 180.0, 240.0]
+bootstrap:
+  enabled: true
+  iterations: 500
+  seed: 20260727
+plots:
+  dpi: 180
+  log_x: false
+  log_y: true

@@ -1,0 +1,55 @@
+{
+  "project": "QRUM synthetic demonstration",
+  "analysis_mode": "template-subtracted residual",
+  "sample_rate_hz": 4096.0,
+  "samples_analyzed": 131072,
+  "duration_seconds": 32.0,
+  "template_scale": 1.0970378049736722,
+  "fit": {
+    "baseline_kind": "linear",
+    "parameters": {
+      "offset": 0.0002965880205930633,
+      "slope": -3.670228938986521e-08,
+      "amplitude": 9.349371134376951e-05,
+      "f0_hz": 166.8232847008869,
+      "quality_factor": 99.99999980778243,
+      "pivot_hz": 164.203125,
+      "use_log_power": false
+    },
+    "metrics_null": {
+      "rss": 0.0004618881511421057,
+      "aic": -85943.89022844445,
+      "aicc": -85943.88795786734,
+      "bic": -85930.74383768138
+    },
+    "metrics_resonance": {
+      "rss": 0.0004612002212930257,
+      "aic": -85945.7719737335,
+      "aicc": -85945.76061439991,
+      "bic": -85912.90599682584
+    },
+    "delta_aicc_null_minus_resonance": 1.872656532577821,
+    "delta_bic_null_minus_resonance": -17.837840855543618
+  },
+  "bootstrap": {
+    "amplitude": {
+      "n": 100,
+      "median": 4.876478402858876e-05,
+      "low_95": 1.193904758669239e-18,
+      "high_95": 0.00016709571261455252
+    },
+    "f0_hz": {
+      "n": 100,
+      "median": 151.4292560985004,
+      "low_95": 120.00000000000001,
+      "high_95": 179.99999999999997
+    },
+    "quality_factor": {
+      "n": 100,
+      "median": 99.98311938012591,
+      "low_95": 9.095661191089603,
+      "high_95": 99.99999999999994
+    }
+  },
+  "configuration_file": "config/demo.yaml"
+}
