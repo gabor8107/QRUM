@@ -1,55 +1,63 @@
-# QRUM — Frequency-Dependent Matter–Curvature Coupling
+# QRUM Correlation Framework
 
-Reproducible Python reference implementation accompanying the manuscript:
+**Reproducible multi-sensor correlation analysis** for public gravitational-wave strain data.
 
-**Einstein–Quantum Resonance Unified Model (QRUM): A Phenomenological Formulation and Exploratory Gravitational-Wave Residual Study**
+Accompanying manuscript:  
+**QRUM: A Correlation-Based Framework for Multi-Sensor Analysis of Gravitational-Wave Data**  
+Version 1.1 — Scientific Revision (July 2026)  
+P. Gabor (Independent Researcher)
 
-Author: P. Gabor  
-DOI: `10.5281/zenodo.21632133`
+---
 
 ## Scope
 
-This repository implements a transparent reference workflow for:
+This repository implements a transparent reference pipeline for:
 
-- HDF5 strain loading
-- optional template subtraction
-- Welch power spectral density estimation
-- frequency-domain whitening
-- instrumental-line exclusion
-- Lorentzian residual fitting
-- AIC/AICc/BIC model comparison
-- bootstrap uncertainty estimation
-- figure and CSV export
+- Loading public GWOSC strain
+- Normalization, preprocessing and whitening
+- Detector time-alignment via cross-correlation
+- Optional simple template subtraction
+- Residual spectral analysis
+- Lorentzian test-function fitting
+- AIC / AICc / BIC comparison
+- Bootstrap uncertainty estimation
+- Event vs. control comparison
 
-The code does **not** hard-code the manuscript's reported fit values. It estimates parameters from the supplied data and configuration.
+The code does **not** hard-code any manuscript results. All parameters are estimated from the supplied data and configuration.
 
 ## Scientific limitation
 
-Exact event-level reproduction requires the precise detector, GPS interval, strain product, waveform/template, PSD segment, filtering choices, fit range, line mask, likelihood and priors. This package therefore provides a reference pipeline and a fully reproducible synthetic demonstration.
+This is a reference implementation, not a production LIGO analysis pipeline. Exact event-level reproduction requires the precise GPS interval, strain product, template, PSD settings, line mask and priors. Without an aligned numerical-relativity template the pipeline performs a detector-spectrum analysis rather than a true post-template residual analysis.
 
-Without an aligned waveform template, the program performs a detector-spectrum analysis rather than a true post-template residual analysis.
+The manuscript reports **null / inconclusive** results regarding any astrophysical residual resonance. This repository exists to make the method fully reproducible and open to independent scrutiny.
+
+## Mathematical core (as defined in the manuscript)
+
+- Normalized detector signals:  
+  `s_i(t) = (S_i(t) − μ_i) / σ_i`
+
+- Cross-correlation and optimal delay:  
+  `C(τ) = Σ [H(t) · L(t+τ)] / √(Σ H² · Σ L²)`  
+  `Δt = arg max |C(τ)|`
+
+- Residual:  
+  `R(t) = H_f(t) − L_aligned(t)`
+
+- Lorentzian test function:  
+  `P(f) = baseline(f) + A / [1 + ((f − f₀)/(f₀/Q))²]`
+
+- Optional network quantities (covariance, dominant eigenvalue, coherence index) are defined in the manuscript for future multi-detector extensions.
 
 ## Installation
 
 ```bash
 python -m venv .venv
-```
-
-Windows:
-
-```bash
-.venv\Scripts\activate
+source .venv/bin/activate   # Linux/macOS
+# .venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
-Linux/macOS:
-
-```bash
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-## Quick test
+## Quick test (synthetic)
 
 ```bash
 python make_demo_data.py
@@ -58,24 +66,12 @@ python run_analysis.py --config config/demo.yaml
 
 ## Real data
 
-1. Put a GWOSC-style `.hdf5` or `.h5` file in `data/`.
+1. Place GWOSC-style `.hdf5` or `.npy` files in `data/`.
 2. Edit `config/example_event.yaml`.
 3. Run:
 
 ```bash
 python run_analysis.py --config config/example_event.yaml
-```
-
-## Main model
-
-```text
-f_phi(f) = 1 + alpha / [1 + ((f - f0)/(f0/Q))^2]
-```
-
-Residual-spectrum test function:
-
-```text
-P(f) = baseline(f) + amplitude / [1 + ((f - f0)/(f0/Q))^2]
 ```
 
 ## Outputs
@@ -85,10 +81,12 @@ P(f) = baseline(f) + amplitude / [1 + ((f - f0)/(f0/Q))^2]
 - `figures/*_spectrum_fit.png`
 - `figures/*_time_series.png`
 
-## Model comparison
-
-The package reports RSS, AIC, AICc, BIC, Delta AICc and Delta BIC. These are exploratory diagnostics, not a fully specified Bayes factor.
-
 ## License
 
-Code: MIT License. The manuscript may remain under its separately stated CC BY-NC-ND 4.0 license.
+- **Code**: MIT License  
+- **Manuscript**: CC BY-NC-ND 4.0
+
+## Author
+
+P. Gabor  
+p.gabor8107@gmail.com

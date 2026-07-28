@@ -1,13 +1,9 @@
 cff-version: 1.2.0
-message: "Please cite the Zenodo manuscript and the software release."
-title: "QRUM gravitational-wave residual analysis reference implementation"
+message: "Please cite the manuscript and this software."
+title: "QRUM Correlation Framework — multi-sensor residual analysis"
 authors:
   - family-names: "Gabor"
     given-names: "P."
-version: "1.0.0"
-date-released: "2026-07-27"
+version: "1.1.0"
+date-released: "2026-07-28"
 license: MIT
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.17579967"
-repository-code: "https://github.com/gabor8107/QRUM"
