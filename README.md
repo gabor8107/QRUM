@@ -86,7 +86,21 @@ python run_analysis.py --config config/example_event.yaml
 - **Code**: MIT License  
 - **Manuscript**: CC BY-NC-ND 4.0
 
+## QRUM Foundational Statement — Authorship and Priority Documentation (v1.3)
+
+Author: P. Gabor (Gábor Palásti)
+Published: 14 October 2026
+Version: 1.3
+
+Zenodo DOI: https://doi.org/10.5281/zenodo.23375759
+
+"Read the Foundational Statement (PDF)" (QRUM_Foundational_Statement_v1.3.pdf)
+
+This document consolidates the foundational QRUM hypothesis, the author's stated contributions, the development of the research programme, and references to earlier publications and documentary records.
+
+It documents authorship and research provenance without independently establishing scientific validity or conferring exclusive legal rights.
+
 ## Author
 
-P. Gabor  
+P. Gabor (Gábor Palásti)  
 p.gabor8107@gmail.com
