@@ -1,3 +1,5 @@
+cff-version: 1.2.0
+message: "Please cite this QRUM Phase 1 QBES v2.2 software."
 title: "QRUM Phase 1 - QBES v2.2 (Lorentzian-Independent)"
 authors:
   - family-names: "Palásti"
