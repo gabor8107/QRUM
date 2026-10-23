@@ -1,0 +1,21 @@
+# Example only: create the CSV files before running.
+project:
+  name: "QRUM offsource window example"
+data:
+  path: "data/demo_residual_spectrum.csv"
+  frequency_column: "frequency_Hz"
+  power_column: "power"
+  offsource_spectra:
+    - "data/offsource_window_01.csv"
+    - "data/offsource_window_02.csv"
+    - "data/offsource_window_03.csv"
+analysis:
+  f_min: 80.0
+  f_max: 250.0
+  target_band: [145.0, 155.0]
+  left_band: [120.0, 145.0]
+  right_band: [155.0, 180.0]
+  max_gap_hz: 2.0
+  mask_lines_Hz: []
+  n_bootstrap: 500
+  seed: 42

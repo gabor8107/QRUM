@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and this software."
+title: "QRUM Phase 1 — Phenomenological Frequency-Domain Residual Framework"
+authors:
+  - family-names: "Gabor"
+    given-names: "P."
+version: "6.1.0"
+date-released: "2026-08-03"
+license: MIT

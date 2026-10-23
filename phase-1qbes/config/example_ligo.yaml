@@ -1,0 +1,17 @@
+project:
+  name: "QRUM Phase 1 LIGO residual example"
+data:
+  path: "data/ligo_residual_spectrum.csv"
+  frequency_column: "frequency_Hz"
+  power_column: "power"
+analysis:
+  f_min: 80.0
+  f_max: 250.0
+  target_band: [145.0, 155.0]
+  left_band: [120.0, 145.0]
+  right_band: [155.0, 180.0]
+  max_gap_hz: 2.0
+  mask_lines_Hz: [60, 120, 180]
+  mask_half_width_Hz: 1.0
+  n_bootstrap: 500
+  seed: 42
