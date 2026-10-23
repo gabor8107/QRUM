@@ -1,9 +1,10 @@
-cff-version: 1.2.0
-message: "Please cite the manuscript and this software."
-title: "QRUM Phase 1 — Phenomenological Frequency-Domain Residual Framework"
+title: "QRUM Phase 1 - QBES v2.2 (Lorentzian-Independent)"
 authors:
-  - family-names: "Gabor"
-    given-names: "P."
-version: "6.1.0"
-date-released: "2026-08-03"
+  - family-names: "Palásti"
+    given-names: "Gábor"
+version: "2.2"
+date-released: "2026-10-23"
 license: MIT
+doi: 10.5281/zenodo.23602635
+repository-code: "https://github.com/gabor8107/QRUM"
+url: "https://github.com/gabor8107/QRUM/releases/tag/qbes-v2.2"
