@@ -1,0 +1,8 @@
+This example uses invented clocks and invented data, NOT measured results.
+Input frequency = 0.010 Hz, N = 10000, dt = 1.0 s
+Synthetic response differences = 0.5, 1.5
+Predicted ideal output amplitudes = 1.000e-17, 3.000e-17
+Injected g = 2.000e-17, fitted g = 2.060e-17, fitted phase = 0.7010 rad
+Simulated 1% false-positive threshold (single fixed frequency) = 3.869e-18
+Simulated detection probability at injected g = 1.000
+No experimental upper limit or QRUM constraint is inferred.
