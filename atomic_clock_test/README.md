@@ -4,7 +4,9 @@ This directory accompanies the preprint:
 
 **P. Gabor, "Testing Weak Frequency-Dependent Residuals with Optical Atomic Clocks" (2026).**
 
-Zenodo DOI: https://doi.org/10.5281/zenodo.22133035
+Zenodo DOI: (QRUM v2.3 Scientific Revision): https://doi.org/10.5281/zenodo.23742447
+
+Previous version (v1): https://doi.org/10.5281/zenodo.22133035
 
 ## Purpose
 
